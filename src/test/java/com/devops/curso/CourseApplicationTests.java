@@ -43,6 +43,7 @@ class CourseApplicationTests {
 		verify(courseDAO, times(1)).save(argThat(course -> course.getName().equals(course2.getName())));
 		verify(courseDAO, times(1)).save(argThat(course -> course.getName().equals(course3.getName())));
 
+
 		verify(moduleDao, times(1)).save(argThat(module -> module.getName().equals(module1.getName())));
 		verify(moduleDao, times(1)).save(argThat(module -> module.getName().equals(module2.getName())));
 		verify(moduleDao, times(1)).save(argThat(module -> module.getName().equals(module3.getName())));
