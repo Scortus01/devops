@@ -27,5 +27,14 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: admin
       MYSQL_ROOT_PASSWORD: root
+
+  maven:
+    image: maven:3.8.3-openjdk-11
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: mvn test
+    networks:
+      - network-braian
 networks:
   network-braian:
