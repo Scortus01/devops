@@ -40,8 +40,8 @@ class CourseApplicationTests {
 
 		// Assert
 		verify(courseDAO, times(1)).save(argThat(course -> course.getName().equals(course1.getName())));
-		verify(courseDAO, times(1)).save(argThat(course -> course.getName().equals(course2.getIdCourse())));
-		verify(courseDAO, times(1)).save(argThat(course -> course.getName().equals(course3.getIdCourse())));
+		verify(courseDAO, times(1)).save(argThat(course -> course.getName().equals(course2.getName())));
+		verify(courseDAO, times(1)).save(argThat(course -> course.getName().equals(course3.getName())));
 
 		verify(moduleDao, times(1)).save(argThat(module -> module.getName().equals(module1.getName())));
 		verify(moduleDao, times(1)).save(argThat(module -> module.getName().equals(module2.getName())));
